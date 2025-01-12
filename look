@@ -1,3 +1,1 @@
-ls | find -name 'z*a!'
-ls | find -name 'a*'
-ls | find -name '*z'
+find -type f -name "a*" -o -name "*z" -o -name "z*a!"
