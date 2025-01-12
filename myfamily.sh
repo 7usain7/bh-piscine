@@ -1,0 +1,1 @@
+curl -s https://learn.reboot01.com/assets/superhero/all.json | jq -r '.connections.relatives | select(.id == $HERO_ID)'
