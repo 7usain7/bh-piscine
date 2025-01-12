@@ -1,1 +1,1 @@
-ls --ignore=.*..* --format=commas --sort=time -p
+ls --ignore=.*..* --format=commas --sort=time -p | sed 's/ //g'
