@@ -1,1 +1,1 @@
-ls -A --format=commas -t --indicator-style=slash
+ls --hide=.*..* --format=commas --sort=time --classify
