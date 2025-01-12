@@ -1,3 +1,1 @@
-ls | find -name 'a*'
-ls | find -name '*z'
-ls | find -name 'z*a!'
+ls | find -name 'a*' | find -name '*z' | find -name 'w*h'
