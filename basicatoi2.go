@@ -12,7 +12,6 @@ func BasicAtoi2(s string) int {
 			integer = 0
 			break
 		}
-		
 	}
 	return integer
 }
