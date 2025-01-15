@@ -11,8 +11,10 @@ func Atoi(s string) int {
 		if !(ascii > '9' || ascii < '0') {
 			number := ascii - '0'
 			integer = integer*10 + number
-		} else if arr[0] == '+' || arr[0] == '-' {
-			continue
+		} else if i == 0 {
+			if arr[i] == '+' || arr[i] == '-'{
+				continue
+			}
 		} else {
 			integer = 0
 			break
