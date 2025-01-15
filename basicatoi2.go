@@ -5,10 +5,10 @@ func BasicAtoi2(s string) int {
 	arr := []rune(s)
 	for i := 0; i < len(s); i++ {
 		ascii := int(arr[i])
-		if !(ascii > '9' || ascii < '0'){
+		if !(ascii > '9' || ascii < '0') {
 			number := ascii - '0'
 			integer = integer*10 + number
-		} else{
+		} else {
 			integer = 0
 			break
 		}
