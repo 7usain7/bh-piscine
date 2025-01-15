@@ -18,7 +18,7 @@ func Atoi(s string) int {
 			break
 		}
 	}
-	if len(arr) == 2 {
+	if len(arr) == 1 || len(arr) == 2 {
 		return integer
 	}
 	if arr[1] == '-' || arr[1] == '+' {
