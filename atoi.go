@@ -12,7 +12,7 @@ func Atoi(s string) int {
 			number := ascii - '0'
 			integer = integer*10 + number
 		} else if i == 0 {
-			if arr[i] == '+' || arr[i] == '-'{
+			if arr[i] == '+' || arr[i] == '-' {
 				continue
 			}
 		} else {
