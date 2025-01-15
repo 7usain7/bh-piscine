@@ -11,6 +11,7 @@ func PrintComb2() {
 						continue
 					}
 					if !(i == '0' && j == '0' && k == '0' && l == '1') {
+						z01.PrintRune(',')
 						z01.PrintRune(' ')
 					}
 					z01.PrintRune(i)
