@@ -5,7 +5,7 @@ func SortIntegerTable(table []int) {
 		smallest := i
 		flag := false
 		for j := i + 1; j < len(table); j++ {
-			if table[i] > table[j] {
+			if table[j] < table[smallest] {
 				smallest = j
 				flag = true
 			}
