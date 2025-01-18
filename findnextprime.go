@@ -10,6 +10,7 @@ func FindNextPrime(nb int) int {
 		for i := 2; i < nb; i++ {
 			if number%i == 0 && number != i {
 				flag = false
+				break
 			}
 		}
 		if flag {
