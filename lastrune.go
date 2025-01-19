@@ -1,6 +1,6 @@
 package piscine
 
-func FirstRune(s string) rune {
+func LastRune(s string) rune {
 	arr := []rune(s)
 	return arr[len(arr)-1]
 }
