@@ -5,5 +5,5 @@ func NRune(s string, n int) rune {
 	if n >= len(arr) || n < 0 {
 		return 0
 	}
-	return arr[0]
+	return arr[n]
 }
