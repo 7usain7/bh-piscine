@@ -5,7 +5,7 @@ func FindNextPrime(nb int) int {
 		return 2
 	}
 	number := nb
-	for true {
+	for {
 		flag := true
 		for i := 2; i < nb; i++ {
 			if number%i == 0 && number != i {
