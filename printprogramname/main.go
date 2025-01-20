@@ -16,7 +16,7 @@ func main() {
 			break
 		}
 	}
-	for i := index + 1; i < len(arr)-4; i++ {
+	for i := index + 1; i < len(arr); i++ {
 		z01.PrintRune(arr[i])
 	}
 }
