@@ -11,7 +11,7 @@ func main() {
 	arr := []rune(path)
 	index := -1
 	for i := len(arr) - 1; i >= 0; i-- {
-		if arr[i] == '\\' {
+		if arr[i] == '\\' || arr[i] == '/' {
 			index = i
 			break
 		}
