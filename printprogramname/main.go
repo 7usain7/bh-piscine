@@ -19,4 +19,5 @@ func main() {
 	for i := index + 1; i < len(arr); i++ {
 		z01.PrintRune(arr[i])
 	}
+	z01.PrintRune('\n')
 }
