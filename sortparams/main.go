@@ -8,7 +8,6 @@ import (
 
 func main() {
 	arr := os.Args
-
 	for i := 1; i < len(arr)-1; i++ {
 		smallest := i
 		flag := false
@@ -25,7 +24,10 @@ func main() {
 		}
 	}
 	for i := 1; i < len(arr); i++ {
-		z01.PrintRune(rune(arr[i][0]))
+		print := []rune(arr[i])
+		for j := 0; j < len(print); j++ {
+			z01.PrintRune(print[j])
+		}
 		z01.PrintRune('\n')
 	}
 }
