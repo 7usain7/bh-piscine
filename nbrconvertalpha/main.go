@@ -34,4 +34,5 @@ func main() {
 			z01.PrintRune(' ')
 		}
 	}
+	z01.PrintRune('\n')
 }
