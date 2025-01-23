@@ -19,7 +19,6 @@ func main() {
 		integer := 0
 		for j := 0; j < len(arr[i]); j++ {
 			if arr[i][j] < '0' || arr[i][j] > '9' {
-				z01.PrintRune(' ')
 				integer = 0
 				break
 			}
@@ -31,7 +30,7 @@ func main() {
 		} else if (integer > 0 && integer <= 26) && isUpper {
 			z01.PrintRune(rune('A' + integer - 1))
 		} else {
-			z01.PrintRune(' ')
+			z01.PrintRune('-')
 		}
 	}
 	z01.PrintRune('\n')
