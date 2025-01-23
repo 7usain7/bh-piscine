@@ -8,6 +8,9 @@ import (
 
 func main() {
 	arr := os.Args
+	if len(arr) == 1 {
+		return
+	}
 	isUpper := false
 	if arr[1] == "--upper" {
 		isUpper = true
