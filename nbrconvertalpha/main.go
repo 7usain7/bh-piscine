@@ -30,7 +30,7 @@ func main() {
 		} else if (integer > 0 && integer <= 26) && isUpper {
 			z01.PrintRune(rune('A' + integer - 1))
 		} else {
-			z01.PrintRune('-')
+			z01.PrintRune(' ')
 		}
 	}
 	z01.PrintRune('\n')
