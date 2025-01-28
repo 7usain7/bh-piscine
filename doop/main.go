@@ -21,7 +21,7 @@ func main() {
 	if err != nil || err1 != nil {
 		return
 	}
-	if (a > 0 && a+b < 0) || (a < 0 && a+b > 0) {
+	if (a > 0 && b > 0 && a+b < 0) || (a < 0 && b < 0 && a+b > 0) {
 		return
 	}
 	if args[1] == "+" {
