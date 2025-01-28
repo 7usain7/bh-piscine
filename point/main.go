@@ -14,5 +14,4 @@ func main() {
 	points := &point{}
 	setPoint(points)
 	print("x = ", points.x, ", y = ", points.y)
-
 }
