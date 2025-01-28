@@ -25,22 +25,22 @@ func main() {
 		return
 	}
 	if args[1] == "+" {
-		fmt.Print(a + b)
+		fmt.Println(a + b)
 	} else if args[1] == "-" {
-		fmt.Print(a - b)
+		fmt.Println(a - b)
 	} else if args[1] == "*" {
-		fmt.Print(a * b)
+		fmt.Println(a * b)
 	} else if args[1] == "/" {
 		if b != 0 {
-			fmt.Print(a / b)
+			fmt.Println(a / b)
 		} else {
-			fmt.Print("No division by 0")
+			fmt.Println("No division by 0")
 		}
 	} else if args[1] == "%" {
 		if b != 0 {
-			fmt.Print(a % b)
+			fmt.Println(a % b)
 		} else {
-			fmt.Print("No modulo by 0")
+			fmt.Println("No modulo by 0")
 		}
 	}
 }
