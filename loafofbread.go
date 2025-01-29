@@ -1,5 +1,13 @@
 package piscine
 
+func isThereChar(s string, index int) bool {
+	for i := index; i < len(s); i++ {
+		if s[i] != ' ' {
+			return true
+		}
+	}
+	return false
+}
 func LoafOfBread(str string) string {
 	if len(str) == 0 {
 		return "\n"
@@ -11,7 +19,7 @@ func LoafOfBread(str string) string {
 		if val != ' ' {
 			charcount++
 		}
-		if (charcount == 6 && i != len(str)-1) || (charcount == 5 && val == ' ' && i != len(str)-1) {
+		if (charcount == 6 && i != len(str)-1) || (charcount == 5 && val == ' ' && isThereChar(str, i)) {
 			result += " "
 			charcount = 0
 			valid = true
