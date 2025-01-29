@@ -1,6 +1,9 @@
 package piscine
 
 func LoafOfBread(str string) string {
+	if len(str) == 0 {
+		return "\n"
+	}
 	charcount := 0
 	valid := false
 	result := ""
