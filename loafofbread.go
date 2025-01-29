@@ -7,15 +7,15 @@ func LoafOfBread(str string) string {
 	charcount := 0
 	valid := false
 	result := ""
-	for _, val := range str {
+	for i, val := range str {
 		if val != ' ' {
 			charcount++
 		}
-		if charcount == 6 || (charcount == 5 && val == ' ') {
+		if (charcount == 6 && i != len(str)-1) || (charcount == 5 && val == ' ') {
 			result += " "
 			charcount = 0
 			valid = true
-		} else if val != ' ' {
+		} else if val != ' ' && charcount != 6 {
 			result += string(val)
 		}
 	}
