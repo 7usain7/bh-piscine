@@ -8,6 +8,7 @@ func isThereChar(s string, index int) bool {
 	}
 	return false
 }
+
 func LoafOfBread(str string) string {
 	if len(str) == 0 {
 		return "\n"
