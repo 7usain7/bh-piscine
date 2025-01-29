@@ -10,7 +10,7 @@ func isThereChar(s string, index int) bool {
 }
 
 func LoafOfBread(str string) string {
-	if len(str) == 0 {
+	if len(str) == 0 || !isThereChar(str, 0) {
 		return "\n"
 	}
 	charcount := 0
