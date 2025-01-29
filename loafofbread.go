@@ -11,7 +11,7 @@ func LoafOfBread(str string) string {
 		if val != ' ' {
 			charcount++
 		}
-		if (charcount == 6 && i != len(str)-1) || (charcount == 5 && val == ' ') {
+		if (charcount == 6 && i != len(str)-1) || (charcount == 5 && val == ' ' && i != len(str)-1) {
 			result += " "
 			charcount = 0
 			valid = true
