@@ -19,7 +19,7 @@ func LoafOfBread(str string) string {
 			result += string(val)
 		}
 	}
-	if valid {
+	if valid || charcount == 5 {
 		return result + "\n"
 	} else {
 		return "Invalid Output\n"
