@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func input(str string, substr string) error {
+func input(str string, substr string, color string) error {
 	file, err := os.Open("models/standard.txt")
 	if err != nil {
 		return err
@@ -41,7 +41,7 @@ func input(str string, substr string) error {
 			all_results = append(all_results, []string{})
 		}
 	}
-	print_ascii(all_results, str, substr)
+	print_ascii(all_results, str, substr, color)
 	return nil
 }
 
@@ -74,10 +74,9 @@ func containts_index(num int, indexes []int) bool {
 	return false
 }
 
-func color() string {
-	args := os.Args[1:]
-	if strings.HasPrefix(args[0], "--color=") {
-		color := args[0][8:]
+func color(color string) string {
+	if strings.HasPrefix(color, "--color=") {
+		color := color[8:]
 		switch strings.ToLower(color) {
 		case "red":
 			return "\033[31m"
@@ -100,12 +99,15 @@ func color() string {
 	return ""
 }
 
-func print_ascii(all_results [][]string, str string, substr string) {
+func print_ascii(all_results [][]string, str string, substr string, color_arg string) {
 	empty := true
 	reset := "\033[0m"
-	color := color()
-
+	color := color(color_arg)
 	indexes := substr_indexes(str, substr)
+	all_colored := false
+	if len(os.Args[1:]) == 2 {
+		all_colored = true
+	}
 
 	for i, result := range all_results {
 		if len(all_results)-1 == i && i != 0 && empty && len(result) == 0 {
@@ -122,7 +124,7 @@ func print_ascii(all_results [][]string, str string, substr string) {
 		for j := 1; j < 9; j++ {
 			for k := range len(result) {
 				if j+k*9 < len(result) {
-					if containts_index(k, indexes) {
+					if containts_index(k, indexes) || all_colored {
 						fmt.Print(color + result[j+k*9] + reset)
 					} else {
 						fmt.Print(result[j+k*9])

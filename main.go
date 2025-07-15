@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
 func isAscii(str string) bool {
@@ -17,15 +16,20 @@ func isAscii(str string) bool {
 
 func main() {
 	args := os.Args[1:]
-	if len(args) < 1 || len(args) > 3 || len(args) == 2 {
+	if len(args) < 1 || len(args) > 3 {
 		fmt.Println("Invalid number of arguements.")
 		return
 	}
 	var sentence string
 	var substr string
-	if strings.HasPrefix(args[0], "--color=") {
+	var color string
+	if len(args) == 3 {
 		sentence = args[2]
 		substr = args[1]
+		color = args[0]
+	} else if len(args) == 2 {
+		sentence = args[1]
+		color = args[0]
 	} else {
 		sentence = args[0]
 	}
@@ -34,7 +38,7 @@ func main() {
 		return
 	}
 	if sentence != "" {
-		err := input(sentence, substr)
+		err := input(sentence, substr, color)
 		if err != nil {
 			fmt.Println(err)
 			return
