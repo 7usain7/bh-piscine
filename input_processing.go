@@ -92,6 +92,8 @@ func color(color string) string {
 			return "\033[36m"
 		case "gray":
 			return "\033[37m"
+		case "orange":
+			return "\033[38;5;208m"
 		case "white":
 			return "\033[97m"
 		}
